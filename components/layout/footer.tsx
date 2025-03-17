@@ -12,7 +12,7 @@ export function Footer() {
             href="https://findmalek.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary-foreground/90 hover:text-secondary-foreground hover:underline transition-colors duration-300"
+            className="text-secondary-foreground/90 hover:text-secondary-foreground transition-colors duration-300 hover:underline"
           >
             findmalek.com
           </a>{" "}

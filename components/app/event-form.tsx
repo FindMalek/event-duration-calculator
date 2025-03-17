@@ -32,20 +32,31 @@ export function EventForm({
     defaultValues: event,
   })
 
-  // Update form when event changes from parent
   useEffect(() => {
     form.reset(event)
   }, [event, form])
 
-  // Handle field updates
   const handleNameChange = (value: string) => {
-    // Check for multi-line paste - look for the specific event format
+    const atMatches = value.match(/at [0-9]/g) || []
+    const onMatches = value.match(/on [A-Za-z0-9]/g) || []
+
+    if (onMatches.length >= 2 && atMatches.length >= 2) {
+      onMultiPaste(value, event.id)
+      return
+    }
+
+    const emojiCount = (value.match(/[^\x00-\x7F]/g) || []).length
+    if (emojiCount >= 2 && value.includes(" on ") && value.includes(" at ")) {
+      onMultiPaste(value, event.id)
+      return
+    }
+
     if (
-      value.includes("on") &&
-      value.includes("at") &&
-      (value.includes("\n") || value.includes("\r\n"))
+      value.length > 100 &&
+      value.includes(" on ") &&
+      value.includes(" at ") &&
+      value.includes(" - ")
     ) {
-      // Pass the entire text for processing
       onMultiPaste(value, event.id)
       return
     }
