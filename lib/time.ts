@@ -67,11 +67,8 @@ export function formatTimeWithAmPm(time: string): string {
 }
 
 export function parseTimeToMinutes(timeStr: string): number {
-  console.log("Parsing time:", timeStr)
-
   // Handle "noon" as 12:00 PM
   if (timeStr.toLowerCase().includes("noon")) {
-    console.log("Noon detected, converting to 12:00 PM")
     return 12 * 60 // 12:00 PM in minutes
   }
 
@@ -116,10 +113,6 @@ export function parseTimeToMinutes(timeStr: string): number {
   if (isAM && hours === 12) {
     totalMinutes -= 12 * 60
   }
-
-  console.log(
-    `Parsed time: ${hours}:${minutes} ${isPM ? "PM" : isAM ? "AM" : ""} = ${totalMinutes} minutes`
-  )
 
   return totalMinutes
 }
@@ -352,7 +345,7 @@ export function extractEventsFromText(text: string): Array<{
     const matches = [...cleanText.matchAll(EVENT_PATTERN)]
 
     matches.forEach((match) => {
-      const [_, eventName, eventDate, startTime, endTime] = match
+      const [, eventName, eventDate, startTime, endTime] = match
       events.push({
         name: eventName.trim(),
         date: eventDate.trim(),

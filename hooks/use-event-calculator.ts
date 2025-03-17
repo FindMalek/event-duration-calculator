@@ -106,7 +106,6 @@ export function useEventCalculator() {
     const parsedEventComponents = extractEventsFromText(text)
 
     if (parsedEventComponents.length === 0) {
-      console.log("No events found in the pasted text")
       return
     }
 
