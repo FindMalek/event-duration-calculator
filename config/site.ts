@@ -1,18 +1,16 @@
-import { SiteConfig } from "@/types"
-
-export const siteConfig: SiteConfig = {
-  name: "Muslim Fasting",
+export const siteConfig = {
+  name: "Event Duration Calculator",
   description:
-    "Comprehensive Guide to Islamic Fasting Practices and Traditions",
-  url: "https://ramadan.findmalek.com",
+    "A user-friendly web app to effortlessly calculate and sum the durations of multiple scheduled events.",
+  url: "https://calculator.findmalek.com",
   images: {
-    default: "https://ramadan.findmalek.com/og.png",
-    notFound: "https://ramadan.findmalek.com/not-found.png",
-    logo: "https://emojicdn.elk.sh/🌙?style=twitter",
+    default: "https://calculator.findmalek.com/og.png",
+    notFound: "https://calculator.findmalek.com/not-found.png",
+    logo: "https://emojicdn.elk.sh/🕒?style=twitter",
   },
   links: {
-    twitter: "https://twitter.com/findmalek",
-    github: "https://github.com/findmalek/muslim-fasting",
+    twitter: "https://twitter.com/foundmalek",
+    github: "https://github.com/FindMalek/event-duration-calculator",
   },
   author: {
     name: "findmalek",
@@ -21,21 +19,15 @@ export const siteConfig: SiteConfig = {
     github: "https://github.com/findmalek",
   },
   keywords: [
-    "Islamic Fasting",
-    "Ramadan",
-    "Muslim Practices",
-    "Sawm",
-    "Iftar",
-    "Suhoor",
-    "Prayer Times",
-    "Halal Diet",
-    "Islamic Calendar",
-    "Eid al-Fitr",
-    "Spiritual Growth",
-    "Quran Study",
-    "Fasting Benefits",
-    "Islamic Traditions",
-    "Dhikr",
+    "Event Calculator",
+    "Duration Calculator",
+    "Time Management",
+    "Event Planning",
+    "Productivity Tools",
+    "Web Application",
+    "Time Tracking",
+    "Calendar Management",
+    "Efficiency Tools",
     "Next.js",
     "React",
     "TypeScript",

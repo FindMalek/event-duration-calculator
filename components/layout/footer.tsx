@@ -6,6 +6,18 @@ export function Footer() {
           © {new Date().getFullYear()} Event Duration Calculator. All rights
           reserved.
         </p>
+        <p>
+          Made by a calendar nerd,{" "}
+          <a
+            href="https://findmalek.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary-foreground/90 hover:text-secondary-foreground hover:underline transition-colors duration-300"
+          >
+            findmalek.com
+          </a>{" "}
+          for the community.
+        </p>
       </div>
     </footer>
   )
